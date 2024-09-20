@@ -8,7 +8,7 @@ public class ConvertJulianToDate {
 
     private int julianValue ;
     private LocalDate date ;
-    private boolean isJulianValueSet = true ;
+    private boolean isJulianValueSet = false ;
     
     public ConvertJulianToDate() {
         
@@ -35,7 +35,7 @@ public class ConvertJulianToDate {
             j = ( 80 * l ) / 2447 ;
             day = l - ( 2447 * j ) / 80 ;
             l = j / 11 ;
-            month = j + 2 - ( 12 * 1 ) ;
+            month = j + 2 - ( 12 * l ) ;
             year = 100 * ( n - 49 ) + i + l ;
 
             this.date = LocalDate.of(year, month, day); 
@@ -47,10 +47,8 @@ public class ConvertJulianToDate {
     }
     
     private void setIsJulianValueSet(){
-        
-        if( this.julianValue == 0){
-            this.isJulianValueSet = false ;
-        }
+
+        this.isJulianValueSet = this.julianValue > 0;
        
     }
     
