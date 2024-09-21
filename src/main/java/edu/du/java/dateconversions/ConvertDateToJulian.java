@@ -7,7 +7,7 @@ public class ConvertDateToJulian {
     
     private LocalDate date ; 
     private int julianDate ;
-    private boolean isDateSet = true ;
+    private boolean isDateSet = false ;
     
     public ConvertDateToJulian() {
     
@@ -41,11 +41,7 @@ public class ConvertDateToJulian {
     }
     
     private void setIsDateSet(){
-        
-        if( this.date == null){
-            this.isDateSet = false;
-        }
-       
+        this.isDateSet = this.date != null;
     }
     
     @Override
