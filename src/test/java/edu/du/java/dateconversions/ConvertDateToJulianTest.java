@@ -29,6 +29,39 @@ public class ConvertDateToJulianTest {
     }
 
     @Test
+    public void testConvertDateToJulian_1_2_1957_is_2435871() {
+        var subject = new ConvertDateToJulian();
+        var date = LocalDate.of(1957, 2, 1);
+        var expected = 2435871;
+
+        subject.setJulianDate(date);
+
+        assertEquals(expected, subject.getJulianDate());
+    }
+
+    @Test
+    public void testConvertDateToJulian_15_3_1942_is_2266076() {
+        var subject = new ConvertDateToJulian();
+        var date = LocalDate.of(1492, 3, 15);
+        var expected = 2266076;
+
+        subject.setJulianDate(date);
+
+        assertEquals(expected, subject.getJulianDate());
+    }
+
+    @Test
+    public void testConvertDateToJulian_25_12_2050_is_2470166() {
+        var subject = new ConvertDateToJulian();
+        var date = LocalDate.of(2050, 12, 25);
+        var expected = 2470166;
+
+        subject.setJulianDate(date);
+
+        assertEquals(expected, subject.getJulianDate());
+    }
+
+    @Test
     public void testToStringWithNoDate() {
         var subject = new ConvertDateToJulian();
         var expected = "Date not set!";

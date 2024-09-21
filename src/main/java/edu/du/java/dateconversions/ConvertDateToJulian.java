@@ -7,7 +7,7 @@ public class ConvertDateToJulian {
     
     private LocalDate date ; 
     private int julianDate ;
-    private boolean isDateSet = false ;
+    private boolean isDateSet = true ;
     
     public ConvertDateToJulian() {
     
