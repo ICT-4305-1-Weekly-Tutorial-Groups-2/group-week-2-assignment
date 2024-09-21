@@ -23,7 +23,7 @@ public class DateConversions {
         
         ConvertJulianToDate julianDt = new ConvertJulianToDate();
         //int julianValue = 2435871;
-        int julianValue = 0;
+        int julianValue = 2435871;
         
         julianDt.setDate(julianValue);
         System.out.println( julianDt.toString());
